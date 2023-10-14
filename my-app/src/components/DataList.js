@@ -7,7 +7,6 @@ function DataList() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        // Define the getData function
         const getData = async () => {
         try {
             const response = await axios.get('http://localhost:3001/api/data'); // Replace with the actual API route
@@ -18,8 +17,6 @@ function DataList() {
             console.error('Error fetching data:', error);
         }
         };
-
-    // Call the getData function
     getData();
   }, []);
 
@@ -31,6 +28,9 @@ function DataList() {
 
   return (
     <div className="App">
+      <h1>This is Analystt.ai Assignment for React Js Developer.</h1>
+      <h4>I used Node and Express for Backend and i have Integrated the API using Axios.</h4>
+      <h4>For Frontend, React and Material UI is used.</h4>
       <ListWithDetails data={data} />
     </div>
   );
